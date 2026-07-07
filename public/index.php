@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AtendeLab</title>
-</head>
-<body>
+<?php
+declare(strict_types=1);
 
-    <h1>AtendeLab</h1>
+/**
+ * Front controller: inicia a sessão e delega tudo para routes.php,
+ * que decide qual controller/action atender com base na URL.
+ * Exemplo: /atendelab/public/?controller=auth&action=login
+ */
 
-    <p>Sistema de Controle de Atendimentos Acadêmicos.</p>
+session_start();
 
-</body>
-</html>
+require __DIR__ . '/../routes.php';
